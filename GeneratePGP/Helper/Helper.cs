@@ -6,7 +6,6 @@ public static class Helper
 {
     public static byte[] Encrypt(byte[] data, string publicKeyPath)
     {
-        //Test Pull
         using var outputStream = new MemoryStream();
         using var publicKeyStream = File.OpenRead(publicKeyPath);
         var pubKeyRingBundle = new PgpPublicKeyRingBundle(PgpUtilities.GetDecoderStream(publicKeyStream));
